@@ -1,0 +1,15 @@
+Audio QA Report
+File: sample-audio\defects\long_end_silence.wav
+Overall status: WARNING
+
+┏━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ Check         ┃ Status  ┃ Message                             ┃ Measured ┃ Expected     ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ sample_rate   │ PASS    │ Sample rate is 44100 Hz.            │ 44100    │ 44100        │
+│ channels      │ PASS    │ Channel count is 2.                 │ 2        │ 2            │
+│ peak_level    │ PASS    │ Peak level is -6.02 dBFS.           │ -6.02    │ <= -1.0 dBFS │
+│ clipping      │ PASS    │ No clipping detected.               │          │ < 0.999      │
+│ start_silence │ PASS    │ Start silence is 0.00s.             │          │ <= 2.0s      │
+│ end_silence   │ WARNING │ End silence is 2.50s, exceeding     │ 2.5      │ <= 2.0s      │
+│               │         │ limit.                              │          │              │
+└───────────────┴─────────┴─────────────────────────────────────┴──────────┴──────────────┘

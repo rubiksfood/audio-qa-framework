@@ -1,0 +1,14 @@
+Audio QA Report
+File: sample-audio\clean\clean_sine.wav
+Overall status: PASS
+
+┏━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ Check         ┃ Status ┃ Message                   ┃ Measured ┃ Expected     ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ sample_rate   │ PASS   │ Sample rate is 44100 Hz.  │ 44100    │ 44100        │
+│ channels      │ PASS   │ Channel count is 2.       │ 2        │ 2            │
+│ peak_level    │ PASS   │ Peak level is -6.02 dBFS. │ -6.02    │ <= -1.0 dBFS │
+│ clipping      │ PASS   │ No clipping detected.     │          │ < 0.999      │
+│ start_silence │ PASS   │ Start silence is 0.00s.   │          │ <= 2.0s      │
+│ end_silence   │ PASS   │ End silence is 0.00s.     │          │ <= 2.0s      │
+└───────────────┴────────┴───────────────────────────┴──────────┴──────────────┘

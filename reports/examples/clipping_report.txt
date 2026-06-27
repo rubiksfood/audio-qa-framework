@@ -1,0 +1,14 @@
+Audio QA Report
+File: sample-audio\defects\clipped_sine.wav
+Overall status: FAIL
+
+┏━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ Check         ┃ Status  ┃ Message                             ┃ Measured ┃ Expected     ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ sample_rate   │ PASS    │ Sample rate is 44100 Hz.            │ 44100    │ 44100        │
+│ channels      │ PASS    │ Channel count is 2.                 │ 2        │ 2            │
+│ peak_level    │ WARNING │ Peak level 0.00 dBFS exceeds limit. │          │ <= -1.0 dBFS │
+│ clipping      │ FAIL    │ 98880 clipped samples detected.     │ 98880    │              │
+│ start_silence │ PASS    │ Start silence is 0.00s.             │          │ <= 2.0s      │
+│ end_silence   │ PASS    │ End silence is 0.00s.               │          │ <= 2.0s      │
+└───────────────┴─────────┴─────────────────────────────────────┴──────────┴──────────────┘
