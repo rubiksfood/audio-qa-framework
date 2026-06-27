@@ -17,3 +17,13 @@ A Python-based Audio Quality Assurance Framework for validating audio files agai
 - Silence detection
 - JSON and console reports
 - pytest test coverage
+
+## Generating Test Audio
+
+Synthetic audio fixtures can be generated with:
+
+```bash
+python scripts/generate_test_audio.py
+```
+
+The generated files are used to test clipping detection, silence detection, and metadata validation.
