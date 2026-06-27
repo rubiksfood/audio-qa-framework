@@ -1,10 +1,29 @@
-from audioqa.loader import read_metadata
+from pathlib import Path
+
+from audioqa.loader import load_audio
+from audioqa.models import Status
+from audioqa.validators.metadata import validate_channels, validate_sample_rate
 
 
-def test_read_metadata_valid_file():
-    metadata = read_metadata("sample-audio/clean/test.wav")
+def test_sample_rate_passes_when_allowed() -> None:
+    audio = load_audio(Path("sample-audio/clean/clean_sine.wav"))
 
-    assert metadata.sample_rate > 0
-    assert metadata.channels > 0
-    assert metadata.frames > 0
-    assert metadata.duration_seconds > 0
+    result = validate_sample_rate(audio, {44_100})
+
+    assert result.status == Status.PASS
+
+
+def test_sample_rate_fails_when_not_allowed() -> None:
+    audio = load_audio(Path("sample-audio/clean/clean_sine.wav"))
+
+    result = validate_sample_rate(audio, {48_000})
+
+    assert result.status == Status.FAIL
+
+
+def test_channels_pass_when_allowed() -> None:
+    audio = load_audio(Path("sample-audio/clean/clean_sine.wav"))
+
+    result = validate_channels(audio, {2})
+
+    assert result.status == Status.PASS
