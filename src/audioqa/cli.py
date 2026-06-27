@@ -11,9 +11,16 @@ from audioqa.validators.levels import validate_peak_level
 from audioqa.validators.metadata import validate_channels, validate_sample_rate
 from audioqa.validators.silence import validate_end_silence, validate_start_silence
 
-app = typer.Typer(help="Audio QA validation tool")
+app = typer.Typer(
+    help="Audio QA validation tool",
+    invoke_without_command=False,
+)
 console = Console()
 
+@app.command()
+def version() -> None:
+    """Show version information."""
+    console.print("audioqa 0.1.0")
 
 @app.command()
 def validate(
