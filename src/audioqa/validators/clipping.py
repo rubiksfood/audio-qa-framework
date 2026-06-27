@@ -5,7 +5,7 @@ from audioqa.models import AudioData, CheckResult, Severity, Status
 
 def validate_clipping(
     audio: AudioData,
-    clipping_threshold: float = 0.999,
+    clipping_threshold: float = 1.0 - (1.0 / 32768),
 ) -> CheckResult:
     clipped_samples = int(np.sum(np.abs(audio.samples) >= clipping_threshold))
 
