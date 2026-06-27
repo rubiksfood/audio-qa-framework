@@ -1,11 +1,9 @@
 # MVP Scope
 
 The MVP validates WAV files for:
-
 - file readability
 - duration
 - sample rate
-- bit depth
 - channels
 - peak level
 - clipping
@@ -13,12 +11,11 @@ The MVP validates WAV files for:
 - end silence
 
 Output:
-
 - console report
-- JSON report
 
 Not yet included:
-
+- bit depth
+- JSON report
 - LUFS
 - phase analysis
 - spectrograms
