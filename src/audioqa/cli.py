@@ -63,8 +63,8 @@ def validate(
             result.check_name,
             f"[{colour}]{result.status.value}[/]",
             result.message,
-            str(result.measured_value or ""),
-            str(result.expected_value or ""),
+            str(result.measured_value) if result.measured_value is not None else "",
+            str(result.expected_value) if result.expected_value is not None else "",
         )
 
     console.print(table)
