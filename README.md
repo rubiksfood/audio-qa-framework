@@ -1,5 +1,6 @@
 # Audio QA Framework
 
+![Tests](https://github.com/rubiksfood/audio-qa-framework/actions/workflows/tests.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.13-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Version](https://img.shields.io/badge/version-v0.1.0-orange)
