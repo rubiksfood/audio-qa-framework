@@ -1,5 +1,9 @@
 # Audio QA Framework
 
+![Python](https://img.shields.io/badge/python-3.13-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Version](https://img.shields.io/badge/version-v0.1.0-orange)
+
 A Python-based Audio Quality Assurance Framework for validating audio files against configurable quality standards.
 
 The project combines software testing practices, audio engineering concepts, automated validation, and structured QA documentation to demonstrate a professional approach to audio quality assurance.
